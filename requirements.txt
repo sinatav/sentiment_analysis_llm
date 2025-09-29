@@ -1,3 +1,4 @@
-dotenv==0.9.9
-langchain_community==0.2.19
-pytest==8.3.5
+dotenv
+langchain_community
+pytest
+langchain_deepseek
