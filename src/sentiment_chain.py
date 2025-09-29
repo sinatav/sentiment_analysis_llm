@@ -9,7 +9,7 @@ def analyze_sentiment(text: str) -> str:
         input_variables=["text"],
         template=(
             "You are a sentiment analysis model. "
-            "Classify the sentiment of the following text as the closest human emotion.\n\n"
+            "Classify the sentiment of the following text as Positive, Negative, or Neutral.\n\n"
             "Text: {text}\n"
             "Sentiment:"
         )
