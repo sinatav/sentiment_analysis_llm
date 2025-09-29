@@ -1,12 +1,13 @@
-from langchain_deepseek import ChatDeepSeek
-from src.config import DEEPSEEK_API_KEY
+from langchain.chat_models import ChatOpenAI
+from src.config import OPENROUTER_API_KEY
 
 def get_llm():
-    if not DEEPSEEK_API_KEY:
-        raise ValueError("DeepSeek API key not found. Set it in .env file.")
+    if not OPENROUTER_API_KEY:
+        raise ValueError("OpenRouter API key not found. Set it in .env file.")
     
-    return ChatDeepSeek(
-        model="deepseek-chat",
-        api_key=DEEPSEEK_API_KEY,
+    return ChatOpenAI(
+        openai_api_base="https://openrouter.ai/api/v1",
+        openai_api_key=OPENROUTER_API_KEY,
+        model_name="gpt-4o-mini",  # you can also use "gpt-4o" or other models
         temperature=0.0
     )

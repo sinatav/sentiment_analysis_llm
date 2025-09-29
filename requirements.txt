@@ -2,3 +2,4 @@ dotenv
 langchain_community
 pytest
 langchain_deepseek
+openrouter
